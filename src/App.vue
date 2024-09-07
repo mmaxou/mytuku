@@ -12,8 +12,8 @@
       </div>
     </header>
     <main>
-      <a-upload draggable :action="ACTION_API" :data="{ type: 'file', name: 'g.jpg' }" multiple :show-link="false"
-        :image-preview="true" :show-remove-button="false" accept=".png,.jpg,.jpeg,.gif"
+      <a-upload draggable :action="ACTION_API" name="image" :data="{ type: 'file', name: 'g.jpg' }" multiple
+        :show-link="false" :image-preview="true" :show-remove-button="false" accept=".png,.jpg,.jpeg,.gif"
         :on-before-upload="checkImageSizeFn" @success="scrollToBottom">
         <template #upload-item="item">
           <div class="vh-img-item" :key="item.fileItem.uid">

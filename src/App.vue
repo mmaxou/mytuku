@@ -12,7 +12,7 @@
       </div>
     </header>
     <main>
-      <a-upload draggable :action="ACTION_API" name="image" :data="{ type: 'file', name: 'g.jpg' }" multiple
+      <a-upload draggable :action="ACTION_API" name="image" :data="{ type: 'file', name: fileName }" multiple
         :show-link="false" :image-preview="true" :show-remove-button="false" accept=".png,.jpg,.jpeg,.gif"
         :on-before-upload="checkImageSizeFn" @success="scrollToBottom">
         <template #upload-item="item">
@@ -62,14 +62,16 @@
   </a-watermark>
 </template>
 <script setup lang="ts">
-import { nextTick } from 'vue'
+import { ref, nextTick } from 'vue'
 import { Message } from '@arco-design/web-vue'
 import QrcodeVue from 'qrcode.vue'
 const ACTION_API = import.meta.env.VITE_IMG_API_URL;
 
 
 // 检查图片大小
+const fileName = ref('');
 const checkImageSizeFn = (file: any) => {
+  fileName.value = file.name
   const maxSize = 5 * 1024 * 1024;
   if (file.size > maxSize) {
     Message.error(`图片大小不能超过 ${maxSize / 1024 / 1024}MB`);

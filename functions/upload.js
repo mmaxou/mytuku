@@ -7,7 +7,7 @@ export async function onRequest({ request }) {
   // const resText = await res.text()
   // return resText
 
-  return fetch('https://api.imgur.com/3/upload', {
+  return fetch('https://api.imgur.com/3/image', {
     headers: {
       ...request.headers,
       cookie:

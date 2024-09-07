@@ -1,1 +1,1 @@
-VITE_IMG_API_URL = '/upload'
+VITE_IMG_API_URL = '/upload?client_id=546c25a59c58ad7'

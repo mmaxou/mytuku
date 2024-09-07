@@ -12,7 +12,7 @@
       </div>
     </header>
     <main>
-      <a-upload draggable :action="ACTION_API" name="image" :data="{ type: 'file', name: fileName }" multiple
+      <a-upload draggable :action="ACTION_API" name="uploaded_file" :data="{ type: 'file', name: fileName }" multiple
         :show-link="false" :image-preview="true" :show-remove-button="false" accept=".png,.jpg,.jpeg,.gif"
         :on-before-upload="checkImageSizeFn" @success="scrollToBottom">
         <template #upload-item="item">

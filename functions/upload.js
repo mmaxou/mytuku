@@ -3,7 +3,7 @@ export async function onRequest({ request }) {
   const { file, ...bd } = body
   const newUrl = new URL(url)
   console.log(newUrl)
-  const res = await fetch(`https://api.imgur.com/3/upload?client_id=546c25a59c58ad7`, { method, headers, body: { ...bd, image: file } })
+  const res = await fetch(`https://api.imgur.com/3/upload`, { method, headers: { ...headers, Authorization: 'Client-ID 546c25a59c58ad7' }, body: { ...bd, image: file } })
   const resText = await res.json()
   return resText
   //   if (!resText.data.success) {

@@ -10,8 +10,21 @@ export async function onRequest({ request }) {
   return fetch('https://catbox.moe/user/api.php', {
     headers: {
       ...request.headers,
-      cookie: 'PHPSESSID=hl9bavb2ko2akpkvgoiu3o15d8',
-      Referer: 'https://catbox.moe/'
+      accept: 'application/json',
+      'accept-language': 'zh-CN,zh;q=0.9',
+      'cache-control': 'no-cache',
+      pragma: 'no-cache',
+      priority: 'u=1, i',
+      'sec-ch-ua': '"Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"',
+      'sec-ch-ua-mobile': '?0',
+      'sec-ch-ua-platform': '"Windows"',
+      'sec-fetch-dest': 'empty',
+      'sec-fetch-mode': 'cors',
+      'sec-fetch-site': 'same-origin',
+      'x-requested-with': 'XMLHttpRequest',
+      cookie: 'PHPSESSID=5hjbtnp53scmc0hkg8uml38kcp',
+      Referer: 'https://catbox.moe/',
+      'Referrer-Policy': 'same-origin'
     },
     body: request.body,
     method: request.method

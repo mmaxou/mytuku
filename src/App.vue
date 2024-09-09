@@ -1,8 +1,8 @@
 <template>
-  <a-watermark class="page_main" content="骤雨重山图床" :alpha="0.1">
+  <a-watermark class="page_main" content="图床" :alpha="0.1">
     <header>
-      <h1>骤雨重山图床</h1>
-      <h2>致力于为开发者提供便捷、免费、稳定、快速的图床服务。</h2>
+      <h1>图床</h1>
+      <h2>自用的快速的图床服务。</h2>
       <div class="desc">
         <p>无限图片储存数量，你可以上传不限数量的图片！</p>
         <p>图片首次访问后缓存，"永久"有效，包括全球分布的 CDN，以确保尽可能快地提供图像.</p>

@@ -23,6 +23,7 @@ export async function onRequest({ request }) {
       'sec-fetch-site': 'same-origin',
       'x-requested-with': 'XMLHttpRequest',
       cookie: 'PHPSESSID=5hjbtnp53scmc0hkg8uml38kcp',
+      origin: 'https://catbox.moe',
       Referer: 'https://catbox.moe/',
       'Referrer-Policy': 'same-origin'
     },

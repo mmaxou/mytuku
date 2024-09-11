@@ -12,9 +12,9 @@
       </div>
     </header>
     <main>
-      <a-upload draggable :action="ACTION_API" name="uploaded_file[]" multiple :show-link="false" :image-preview="true"
-        :show-remove-button="false" accept=".png,.jpg,.jpeg,.gif" :on-before-upload="checkImageSizeFn"
-        @success="scrollToBottom">
+      <a-upload draggable :action="ACTION_API" name="fileToUpload" :data="{ reqtype: 'fileupload', userhash: '' }"
+        multiple :show-link="false" :image-preview="true" :show-remove-button="false" accept=".png,.jpg,.jpeg,.gif"
+        :on-before-upload="checkImageSizeFn" @success="scrollToBottom">
         <template #upload-item="item">
           <div class="vh-img-item" :key="item.fileItem.uid">
             <a-image class="vh_img_val" :src="item.fileItem.url" />
